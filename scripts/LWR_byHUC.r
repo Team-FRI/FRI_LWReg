@@ -121,7 +121,9 @@ chub_HUC <- ggplot(ab_row) +
   xlab("Year") +
   ylab("b ± 95% Confidence Interval")+
   annotate("text",x=1,y=2.85,label="n = 158")+
+  annotate("text",x=1,y=3.35,label="a")+
   annotate("text",x=2,y=2.85,label="n = 884")+
+  annotate("text",x=2,y=3.35,label="b")+
   theme(axis.title.y = element_text(angle=90, hjust = 0.5, vjust=1.5, size=18))+
   theme(axis.title.x = element_text(angle=0, hjust = 0.5, vjust=-1.2, size=18))+
   theme(axis.text=element_text(size=12))
@@ -182,7 +184,9 @@ longnose_HUC <- ggplot(ab_row) +
   xlab("Year") +
   ylab("b ± 95% Confidence Interval")+
   annotate("text",x=1,y=3.05,label="n = 108")+
+  annotate("text",x=1,y=3.18,label="a")+
   annotate("text",x=2,y=3.05,label="n = 751")+
+  annotate("text",x=2,y=3.21,label="b")+
   theme(axis.title.y = element_text(angle=90, hjust = 0.5, vjust=1.5, size=18))+
   theme(axis.title.x = element_text(angle=0, hjust = 0.5, vjust=-1.2, size=18))+
   theme(axis.text=element_text(size=12))

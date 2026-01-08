@@ -14,7 +14,7 @@ library(grid)
 ####Blacknose####
 fish <- subset(Fish_meta, Species == "Blacknose Dace" )
 
-fish$Year <- substr(fish$Date, 0, 4)
+fish$Year <- substr(fish$Date,(nchar(fish$Date)+1)-4,nchar(fish$Date))
 TAB= table(fish$Year)
 fish <-fish[ifelse(TAB[fish$Year]<10, FALSE, TRUE),]
 
@@ -61,9 +61,13 @@ blacknose_plot <- ggplot(ab_row) +
   xlab("Year") +
   ylab("b ± 95% Confidence Interval")+
   annotate("text",x=1,y=2.8,label="n = 506")+
+  annotate("text",x=1,y=3.25,label="a")+
   annotate("text",x=2,y=2.8,label="n = 412")+
+  annotate("text",x=2,y=3.25,label="ab")+
   annotate("text",x=3,y=2.8,label="n = 381")+
+  annotate("text",x=3,y=3.25,label="ab")+
   annotate("text",x=4,y=2.8,label="n = 401")+
+  annotate("text",x=4,y=3.25,label="b")+
   theme(axis.title.y = element_text(angle=90, hjust = 0.5, vjust=1.5, size=18))+
   theme(axis.title.x = element_text(angle=0, hjust = 0.5, vjust=-1.2, size=18))+
   theme(axis.text=element_text(size=12))
@@ -73,7 +77,8 @@ blacknose_plot <- ggplot(ab_row) +
 fish <- subset(Fish_meta, Species == "Creek Chub" )
 
 
-fish$Year <- substr(fish$Date, 0, 4)
+fish$Year <- substr(fish$Date,(nchar(fish$Date)+1)-4,nchar(fish$Date))
+
 TAB= table(fish$Year)
 fish <-fish[ifelse(TAB[fish$Year]<10, FALSE, TRUE),]
 
@@ -120,9 +125,13 @@ chub_plot <- ggplot(ab_row) +
   xlab("Year") +
   ylab("b ± 95% Confidence Interval")+
   annotate("text",x=1,y=2.4,label="n = 328")+
+  annotate("text",x=1,y=3.25,label="ab")+
   annotate("text",x=2,y=2.4,label="n = 237")+
+  annotate("text",x=2,y=3.25,label="a")+
   annotate("text",x=3,y=2.4,label="n = 249")+
+  annotate("text",x=3,y=3.25,label="a")+
   annotate("text",x=4,y=2.4,label="n = 228")+
+  annotate("text",x=4,y=3.25,label="b")+
   theme(axis.title.y = element_text(angle=90, hjust = 0.5, vjust=1.5, size=18))+
   theme(axis.title.x = element_text(angle=0, hjust = 0.5, vjust=-1.2, size=18))+
   theme(axis.text=element_text(size=12))
@@ -131,7 +140,8 @@ chub_plot <- ggplot(ab_row) +
 fish <- subset(Fish_meta, Species == "Longnose Dace" )
 
 
-fish$Year <- substr(fish$Date, 0, 4)
+fish$Year <- substr(fish$Date,(nchar(fish$Date)+1)-4,nchar(fish$Date))
+
 TAB= table(fish$Year)
 fish <-fish[ifelse(TAB[fish$Year]<10, FALSE, TRUE),]
 
@@ -177,9 +187,13 @@ longnose_plot <- ggplot(ab_row) +
   xlab("Year") +
   ylab("b ± 95% Confidence Interval")+
   annotate("text",x=1,y=2.6,label="n = 297")+
+  annotate("text",x=1,y=3.19,label="a")+
   annotate("text",x=2,y=2.6,label="n = 150")+
+  annotate("text",x=2,y=3.25,label="b")+
   annotate("text",x=3,y=2.6,label="n = 207")+
+  annotate("text",x=3,y=3.25,label="b")+
   annotate("text",x=4,y=2.6,label="n = 205")+
+  annotate("text",x=4,y=3.25,label="b")+
   theme(axis.title.y = element_text(angle=90, hjust = 0.5, vjust=1.5, size=18))+
   theme(axis.title.x = element_text(angle=0, hjust = 0.5, vjust=-1.2, size=18))+
   theme(axis.text=element_text(size=12))
@@ -188,7 +202,8 @@ longnose_plot <- ggplot(ab_row) +
 fish <- subset(Fish_meta, Species == "Tessellated Darter" )
 
 
-fish$Year <- substr(fish$Date, 0, 4)
+fish$Year <- substr(fish$Date,(nchar(fish$Date)+1)-4,nchar(fish$Date))
+
 TAB= table(fish$Year)
 fish <-fish[ifelse(TAB[fish$Year]<10, FALSE, TRUE),]
 
